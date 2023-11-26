@@ -12,7 +12,7 @@ Video semantic segmentation is a pivotal aspect of video representation learning
 # A short video demo of our results:
 https://github.com/ZHE-SAPI/DA-STC/assets/52643313/d5738a66-8e77-4718-a851-4218d500f800
 
-A longer video demo for [more cases](https://drive.google.com/file/d/1lPZkvsY3rBFVRjNlrz4h2xGsD41J7Y5Z/view?usp=drive_link) is avaliable.
+A longer video demo for [more cases](https://drive.google.com/file/d/1lPZkvsY3rBFVRjNlrz4h2xGsD41J7Y5Z/view?usp=drive_link) is available.
 # Installation
 1. create conda environment  
 ```
