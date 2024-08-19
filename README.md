@@ -11,10 +11,7 @@ Video semantic segmentation is a pivotal aspect of video representation learning
 *Index Terms: Domain adaptation, video semantic segmentation, feature alignment, spatio-temporal consistency.*
   
 
-# A short video demo of our results:
-
-
-A longer video demo for [more cases](https://drive.google.com/file/d/1Rm_nqzE37HJQ4XUkzJ_VaK-umqj-xq1D/view?usp=drive_link) is avaliable.
+# A [long video demo](https://drive.google.com/file/d/1Rm_nqzE37HJQ4XUkzJ_VaK-umqj-xq1D/view?usp=drive_link) of our results is avaliable.
 # Installation
 1. create conda environment  
 ```
