@@ -6,8 +6,9 @@ Unsupervised Domain Adaptive Semantic Segmentation (UDA-SS) aims to transfer the
 Under this observation, we advocate unifying the study of UDA-SS across video and image scenarios, enabling a more comprehensive understanding, synergistic advancements, and efficient knowledge sharing.
 To that end, we explore the unified UDA-SS from a general data augmentation perspective, serving as a unifying conceptual framework, enabling improved generalization, and potential for cross-pollination of ideas, ultimately contributing to the overall progress and practical impact of this field of research. Specifically, we propose a Quad-directional Mixup (QuadMix) method, characterized by tackling distinct point attributes and feature inconsistencies through four-directional paths for intra- and inter-domain mixing in a feature space. To deal with temporal shifts with videos, we incorporate optical flow-guided feature aggregation across spatial and temporal dimensions for fine-grained domain alignment. Extensive experiments show that our method outperforms the state-of-the-art works by large margins on four challenging UDA-SS benchmarks.
 *Index Terms: Unified domain adaptation, semantic segmentation, QuadMix, flow-guided spatio-temporal aggregation.*
-  
 
+ 
+# Click for more qualitative results
 [![Please watch the video for more qualitative results.](https://github.com/ZHE-SAPI/UDASS/blob/main/Unified-UDASS.jpg?raw=true)](https://youtu.be/DgrZYkebhs0)
 
 The video demo is also avaliable at [bilibili](https://www.bilibili.com/video/BV1ZgtMejErB/?vd_source=ae767173839d1c3a41173ad40cc34d53) or [google drive](https://drive.google.com/file/d/1OT5GtsbC0CcW6aydBL27ADjve95YE5oj/view?usp=sharing).
