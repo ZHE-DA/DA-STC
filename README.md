@@ -10,7 +10,7 @@ To that end, we explore the unified UDA-SS from a general data augmentation pers
 
 [![Please watch the video for more qualitative results.](https://github.com/ZHE-SAPI/UDASS/blob/main/Unified-UDASS.jpg?raw=true)](https://youtu.be/DgrZYkebhs0)
 
-The video demo is also avaliable at [bilibili](https://www.bilibili.com/video/BV1ZgtMejErB/?vd_source=ae767173839d1c3a41173ad40cc34d53).
+The video demo is also avaliable at [bilibili](https://www.bilibili.com/video/BV1ZgtMejErB/?vd_source=ae767173839d1c3a41173ad40cc34d53) or [google drive](https://drive.google.com/file/d/1OT5GtsbC0CcW6aydBL27ADjve95YE5oj/view?usp=sharing).
 
 # Installation
 1. create conda environment  
