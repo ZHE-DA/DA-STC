@@ -1,10 +1,6 @@
 # UDASS
 The official repo for "Unified Domain Adaptive Semantic Segmentation". [[paper](https://arxiv.org/abs/2311.13254)]        
-(Arxiv V1 title: "DA-STC: Domain Adaptive Video Semantic Segmentation via Spatio-Temporal Consistency")
-
  
-
-
 # Abstract
 Unsupervised Domain Adaptive Semantic Segmentation (UDA-SS) aims to transfer the supervision from a labeled source domain to an unlabeled target domain. The majority of existing UDA-SS works typically consider images whilst recent attempts have extended further to tackle videos by modeling the temporal dimension. Although the two lines of research share the major challenges -- overcoming the underlying domain distribution shift, their studies are largely independent. This causes several issues: (1) The insights gained from each line of research remain fragmented, leading to a lack of a holistic understanding of the problem and potential solutions. (2) Preventing the unification of methods, techniques, and best practices across the two domains, resulting in redundant efforts and missed opportunities for cross-pollination of ideas. (3) Without a unified approach, the knowledge and advancements made in one domain (images or videos) may not be effectively transferred to the other, leading to suboptimal performance and slower progress.
 Under this observation, we advocate unifying the study of UDA-SS across video and image scenarios, enabling a more comprehensive understanding, synergistic advancements, and efficient knowledge sharing.
@@ -12,7 +8,6 @@ To that end, we explore the unified UDA-SS from a general data augmentation pers
 
 *Index Terms: Unified domain adaptation, semantic segmentation, QuadMix, flow-guided spatio-temporal aggregation.*
   
-
 [![Please watch the video for more qualitative results.](https://github.com/ZHE-SAPI/UDASS/blob/main/udass.png?raw=true)](https://youtu.be/DgrZYkebhs0)
 
 # Installation
@@ -89,7 +84,7 @@ This codebase is borrowed from [TPS](https://github.com/xing0047/tps), [DSP](htt
 # Citation
 ```
 @misc{zhang2023dastc,
-      title={STCL: Spatio-Temporal Consistency Learning for Domain Adaptive Video Semantic Segmentation}, 
+      title={Unified Domain Adaptive Semantic Segmentation}, 
       author={Zhe Zhang and Gaochang Wu and Jing Zhang and Chunhua Shen and Dacheng Tao and Tianyou Chai},
       year={2023},
       eprint={2311.13254},
