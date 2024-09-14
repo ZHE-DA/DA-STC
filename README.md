@@ -9,8 +9,7 @@ To that end, we explore the unified UDA-SS from a general data augmentation pers
 *Index Terms: Unified domain adaptation, semantic segmentation, QuadMix, flow-guided spatio-temporal aggregation.*
   
 
-[![Please watch the video for more qualitative results.](https://github.com/ZHE-SAPI/UDASS/blob/main/Unified-UDASS.jpg?raw=true)](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
-
+[![Please watch the video for more qualitative results.](https://github.com/ZHE-SAPI/UDASS/blob/main/Unified-UDASS.jpg?raw=true)](https://youtu.be/DgrZYkebhs0)
 
 # Installation
 1. create conda environment  
