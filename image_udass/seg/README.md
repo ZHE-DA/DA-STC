@@ -95,16 +95,7 @@ python tools/convert_datasets/synthia.py data/synthia/ --nproc 8
 
 ## Training
 
-For convenience, we provide an [annotated config file](configs/mic/gtaHR2csHR_mic_hrda.py)
-of the final UDASS(HRDA) on GTA→Cityscapes. A training job can be launched using:
-
-```shell
-python run_experiments.py --config configs/udass/gtaHR2csHR_udass_hrda.py
-```
-
-The logs and checkpoints are stored in `work_dirs/`.
-
-For the other experiments in our paper, we use a script to automatically
+For the experiments in our paper, we use a script to automatically
 generate and train the configs:
 
 ```shell
@@ -115,13 +106,18 @@ More information about the available experiments and their assigned IDs, can be
 found in [experiments.py](experiments.py). The generated configs will be stored
 in `configs/generated/`.
 
+(The core code will be available soon.)
+
 ## Evaluation
+
 
 A trained model can be evaluated using:
 
 ```shell
 sh test.sh work_dirs
 ```
+
+The checkpoints should be downloaded and be put in ./work_dirs.
 
 The predictions are saved for inspection to
 `work_dirs/preds`
@@ -136,6 +132,8 @@ classes. As the Iou for the 3 missing classes is 0, you can do the conversion
 
 The predictions can be submitted to the public evaluation server of the
 respective dataset to obtain the test score.
+
+(The evalution code can in parallel with Train) (run the evalution code to validate the results.)
 
 ## Checkpoints
 

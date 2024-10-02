@@ -121,7 +121,7 @@ For quick preparation, please download the estimated optical flow of all dataset
 
 ## Train and Test
 
-- Train
+- Train (the core code will be available soon.)
 
 ```
   cd xxxxPATHxxxx/video_udass/VIDEO (Please adjust according to the actual address of your device manually )
@@ -135,7 +135,7 @@ For quick preparation, please download the estimated optical flow of all dataset
   python ./tps/scripts_ablation/train_DAVSS_DSF_cd_ablation_31_former.py --cfg ./tps/scripts_ablation/configs/tps_viper2city.yml
 ```
 
-- Test (can in parallel with Train)
+- Test (can in parallel with Train) (run the test code to validate the results.)
 
 ```
   cd xxxxPATHxxxx/video_udass/VIDEO

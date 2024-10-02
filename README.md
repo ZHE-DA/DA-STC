@@ -18,7 +18,6 @@ To that end, we explore the unified UDA-SS from a general data augmentation pers
 
 The video demo is also avaliable at [bilibili](https://www.bilibili.com/video/BV1ZgtMejErB/?vd_source=ae767173839d1c3a41173ad40cc34d53) or [google drive](https://drive.google.com/file/d/1OT5GtsbC0CcW6aydBL27ADjve95YE5oj/view?usp=sharing). Please select HD quality (1080p) for clearer display.
 
-
 ## UDASS for Image Scenarios
 
 You can find the source code to run image-UDASS on domain-adaptive **IMAGE** semantic segmentation in the subfolder [/image_udass](https://github.com/ZHE-SAPI/UDASS/tree/main/image_udass). For instructions how to set up the environment/datasets and how to train UDASS for image semantic segmentation UDA, please refer to [seg/README.md](https://github.com/ZHE-SAPI/UDASS/blob/main/image_udass/seg/README.md).
