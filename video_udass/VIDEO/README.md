@@ -93,7 +93,7 @@ seeds, we provide the checkpoint with the median validation performance here.
 
 ## Optical Flow Estimation
 
-For quick preparation, please download the estimated optical flow of all datasets here.
+For quick preparation, please download the estimated optical flow of all datasets here, and put them in the ./VIDEO/data folder.
 
 - Synthia-Seq
 
