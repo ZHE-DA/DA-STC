@@ -1,0 +1,10 @@
+pyyaml
+tensorboardX
+easydict
+matplotlib
+scipy
+scikit-image
+future
+setuptools
+tqdm
+cffi
