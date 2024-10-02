@@ -1,6 +1,6 @@
 # UDASS
 
-The official repo for "Unified Domain Adaptive Semantic Segmentation". [[paper](https://arxiv.org/abs/2311.13254)] [[demo](https://drive.google.com/file/d/1OT5GtsbC0CcW6aydBL27ADjve95YE5oj/view?usp=sharing)]
+The official repo for the "Unified Domain Adaptive Semantic Segmentation". [[paper](https://arxiv.org/abs/2311.13254)] [[demo](https://drive.google.com/file/d/1OT5GtsbC0CcW6aydBL27ADjve95YE5oj/view?usp=sharing)]
 
 # Abstract
 
@@ -26,7 +26,7 @@ You can find the source code to run image-UDASS on domain-adaptive **IMAGE** sem
 
 ## UDASS for Video Scenarios
 
-You can find the source code to run image-UDASS on domain-adaptive **VIDEO **semantic segmentation in the subfolder [/video_udass](https://github.com/ZHE-SAPI/UDASS/tree/main/video_udass). For instructions how to set up the environment/datasets and how to train UDASS for image semantic segmentation UDA, please refer to [VIDEO/README.md](https://github.com/ZHE-SAPI/UDASS/blob/main/video_udass/VIDEO/README.md).
+You can find the source code to run image-UDASS on domain-adaptive **VIDEO** semantic segmentation in the subfolder [/video_udass](https://github.com/ZHE-SAPI/UDASS/tree/main/video_udass). For instructions how to set up the environment/datasets and how to train UDASS for image semantic segmentation UDA, please refer to [VIDEO/README.md](https://github.com/ZHE-SAPI/UDASS/blob/main/video_udass/VIDEO/README.md).
 
 ## Citation
 
