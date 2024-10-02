@@ -104,7 +104,6 @@ For quick preparation, please download the estimated optical flow of all dataset
 - Cityscapes-Seq
 
   [train](https://drive.google.com/file/d/193uZifde7WiuImwAgshkPTt1Z6zgE3z8/view?usp=sharing) | [val
-
   ](https://drive.google.com/file/d/1USizndlUewVb8Eqh4SV6uNuLCEfV9vzU/view?usp=sharing)
 
   The steps to generate the optical flow (refer to [issue](https://github.com/Dayan-Guan/DA-VSN/issues/1)):
