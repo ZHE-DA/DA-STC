@@ -95,7 +95,6 @@ seeds, we provide the checkpoint with the median validation performance here.
 
 For quick preparation, please download the estimated optical flow of all datasets here.
 
-
 - Synthia-Seq
 
   [train](https://drive.google.com/file/d/18q6KH-beoBp5jSr1Pl1lMiEcb2te2vxq/view?usp=sharing)
@@ -109,7 +108,7 @@ For quick preparation, please download the estimated optical flow of all dataset
   The steps to generate the optical flow (refer to [issue](https://github.com/Dayan-Guan/DA-VSN/issues/1)):
 
 1. git clone git clone -b sdcnet [https://github.com/NVIDIA/semantic-segmentation.git](https://github.com/NVIDIA/semantic-segmentation.git);
-2. Download the [Code_for_Optical_Flow_Estimation.zip](https://github.com/Dayan-Guan/DA-VSN/files/7114575/Code_for_Optical_Flow_Estimation.zip) and unzip these files in the folder of sdcnet;
+2. Unzip the files of [video_udass/Code_for_Optical_Flow_Estimation.zip](https://github.com/ZHE-SAPI/UDASS/blob/main/video_udass/Code_for_Optical_Flow_Estimation.zip) and put them in the folder of sdcnet;
 3. Run the shell scripts to generate optical flow:
    ```
    [1] CItyscapes validation set: "python Cityscapes_val_optical_flow_scale512.py --pretrained ../pretrained_models/sdc_cityscapes_vrec.pth.tar --flownet2_checkpoint ../pretrained_models/FlowNet2_checkpoint.pth.tar --source_dir ../../data/Cityscapes --target_dir Cityscapes_val_optical_flow_scale512 --vis --resize 0.5"
