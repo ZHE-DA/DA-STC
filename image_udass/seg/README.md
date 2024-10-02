@@ -110,7 +110,6 @@ in `configs/generated/`.
 
 ## Evaluation
 
-
 A trained model can be evaluated using:
 
 ```shell
@@ -143,8 +142,8 @@ seeds, we provide the checkpoint with the median validation performance here.
 
 * [image-UDASS(VIT) for GTA→Cityscapes](https://drive.google.com/file/d/1VYlG0f92Y8VAv712-i5f4GEIwTqbURqf/view?usp=sharing)
 * [image-UDASS(VIT) for Synthia→Cityscapes](https://drive.google.com/file/d/1ll6BAqoexkNDOpLJ3eaJRIBgkysnMwsZ/view?usp=sharing)
-* [image-UDASS(CNN) for GTA→Cityscapes](https://drive.google.com/file/d/1VYlG0f92Y8VAv712-i5f4GEIwTqbURqf/view?usp=sharing)
-* [image-UDASS(CNN) for Synthia→Cityscapes](https://drive.google.com/file/d/15ryaQVPAcwuvx42N4ag-ilUyHizRpB5s/view?usp=sharing)
+* [image-UDASS(CNN) for GTA→Cityscapes](https://drive.google.com/file/d/15ryaQVPAcwuvx42N4ag-ilUyHizRpB5s/view?usp=sharing)
+* [image-UDASS(CNN) for Synthia→Cityscapes](https://drive.google.com/file/d/1JgStA157b85Ueh7S_WJUP6iMHhUkLybW/view?usp=sharing)
 
 The checkpoints should be placed in ./work_dirs. Please note that:
 
