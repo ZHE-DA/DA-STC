@@ -26,7 +26,7 @@ You can find the source code to run image-UDASS on domain-adaptive **IMAGE** sem
 
 ## UDASS for Video Scenarios
 
-You can find the source code to run image-UDASS on domain-adaptive **VIDEO **semantic segmentation in the subfolder [/video_udass](https://github.com/ZHE-SAPI/UDASS/tree/main/video_udass). For instructions how to set up the environment/datasets and how to train UDASS for image semantic segmentation UDA, please refer to [VIDEO/README.md](https://github.com/ZHE-SAPI/UDASS/blob/main/video_udass/VIDEO/README.md).
+You can find the source code to run image-UDASS on domain-adaptive **VIDEO** semantic segmentation in the subfolder [/video_udass](https://github.com/ZHE-SAPI/UDASS/tree/main/video_udass). For instructions how to set up the environment/datasets and how to train UDASS for image semantic segmentation UDA, please refer to [VIDEO/README.md](https://github.com/ZHE-SAPI/UDASS/blob/main/video_udass/VIDEO/README.md).
 
 ## Citation
 
