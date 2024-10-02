@@ -1,6 +1,6 @@
 # UDASS
 
-The official repo for "Unified Domain Adaptive Semantic Segmentation". [[paper](https://arxiv.org/abs/2311.13254)] [[demo](https://drive.google.com/file/d/1OT5GtsbC0CcW6aydBL27ADjve95YE5oj/view?usp=sharing)]
+The official repo for the "Unified Domain Adaptive Semantic Segmentation". [[paper](https://arxiv.org/abs/2311.13254)] [[demo](https://drive.google.com/file/d/1OT5GtsbC0CcW6aydBL27ADjve95YE5oj/view?usp=sharing)]
 
 # Abstract
 
