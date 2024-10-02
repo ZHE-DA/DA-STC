@@ -1,0 +1,23 @@
+SOURCE: Viper
+DATA_DIRECTORY_SOURCE: ../../video_seg/TPS/data/Viper
+DATA_LIST_SOURCE: tps/dataset/Viper_list/train.txt
+NUM_CLASSES: 15
+NUM_WORKERS: 4
+generate_threshold_path: experiments_result/generate_viper
+TRAIN:
+  EARLY_STOP: 40000
+  SAVE_PRED_EVERY: 1000 
+  flow_path_src: ../../video_seg/TPS/tps/data/estimated_optical_flow_viper_train
+  DA_METHOD: SourceOnly
+  INFO_TARGET: tps/dataset/CityscapesSeq_list/info_Viper.json
+  SNAPSHOT_DIR: experiments_result/snapshots/tps_viper2city_SourceOnly
+  INPUT_SIZE_SOURCE:
+    - 1280
+    - 720
+TEST:
+  SNAPSHOT_STEP: 1000  
+  SNAPSHOT_START_ITER: 1000 
+  MODE: video_best
+  INFO_TARGET: tps/dataset/CityscapesSeq_list/info_Viper.json
+  SNAPSHOT_DIR: ['experiments_result/snapshots/tps_viper2city_SourceOnly']  # used in 'best' mode
+
