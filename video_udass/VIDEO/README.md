@@ -87,11 +87,8 @@ As the results in the paper are provided as the mean over three random
 seeds, we provide the checkpoint with the median validation performance here.
 
 * [video-UDASS(VIT) for Synthia-Seq→Cityscapes-Seq](https://drive.google.com/file/d/1kwzpghUD1UiK6AvQyazSw0gMGYjAUCwe/view?usp=sharing)
-* 
 * [video-UDASS(VIT) for VIPER→Cityscapes-Seq](https://drive.google.com/file/d/1OCDnHlz2lJplnPcV7iINOhiRLUTeNm6P/view?usp=sharing)
-* 
 * [video-UDASS(CNN) for Synthia-Seq→Cityscapes-Seq](https://drive.google.com/file/d/1XJ5naWs9wuZ8k1r6VRHx6YRF7gK5HuCV/view?usp=sharing)
-* 
 * [video-UDASS(CNN) for VIPER→Cityscapes-Seq](https://drive.google.com/file/d/1TGpysDaBkQ3F-NQj9wTL0JJnclQMQmto/view?usp=sharing)
 
 ## Optical Flow Estimation
