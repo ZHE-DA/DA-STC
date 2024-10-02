@@ -1,0 +1,30 @@
+SOURCE: Viper
+DATA_DIRECTORY_SOURCE: ../../video_seg/TPS/data/Viper
+DATA_LIST_SOURCE: tps/dataset/Viper_list/train.txt
+NUM_CLASSES: 15
+NUM_WORKERS: 4
+TRAIN:
+  LEARNING_RATE: 0.0001
+  EARLY_STOP: 40000
+  LAMBDA_T: 0.1
+
+  SCALING_RATIO:
+    - 0.8
+    - 1.2
+  flow_path_src: ../../video_seg/TPS/tps/data/estimated_optical_flow_viper_train
+  DA_METHOD: TPS
+  INFO_TARGET: tps/dataset/CityscapesSeq_list/info_Viper.json
+  INPUT_SIZE_SOURCE:
+      - 1280
+      - 720
+  SAVE_PRED_EVERY: 1000 #100
+ 
+
+TEST:
+  
+
+  MODE: video_best # video_single, video_best
+  INFO_TARGET: tps/dataset/CityscapesSeq_list/info_Viper.json
+  SNAPSHOT_STEP: 1000 #100
+  SNAPSHOT_START_ITER: 1000 #100
+  RESTORE_FROM_prototype: ['/home/customer/Desktop/ZZ/FMFSemi/TransferLearning/examples/domain_adaptation/video_tps/TPS/pretrained_models/tps_viper2city_SourceOnly/model_26000.pth',]

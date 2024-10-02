@@ -1,0 +1,7 @@
+python -m tools.test ${CONFIG_FILE} ${CHECKPOINT_FILE} --eval mIoU --show-dir ${SHOW_DIR} --opacity 1
+
+
+
+python -m tools.test ./work_dirs/local-basic/240815_0418_gtaHR2csHR_mic_hrda_s2_cf242/20240815_041930.log.json ./work_dirs/local-basic/240815_0418_gtaHR2csHR_mic_hrda_s2_cf242/iter_50000.pth --eval mIoU --show-dir ./work_dirs/local-basic/240815_0418_gtaHR2csHR_mic_hrda_s2_cf242 --opacity 1
+
+

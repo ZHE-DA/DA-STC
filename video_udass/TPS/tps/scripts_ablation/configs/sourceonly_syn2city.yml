@@ -1,0 +1,27 @@
+SOURCE: SynthiaSeq
+DATA_DIRECTORY_SOURCE: ../../video_seg/TPS/data/SynthiaSeq/SEQS-04-DAWN
+DATA_LIST_SOURCE: tps/dataset/SynthiaSeq_list/train.txt
+### train on 12 classes and evaluate on 11 classes
+NUM_CLASSES: 12
+NUM_WORKERS: 0
+generate_threshold_path: experiments_result/generate_synthina
+TRAIN:
+  EARLY_STOP: 40000
+  SAVE_PRED_EVERY: 100
+  flow_path_src: ../../video_seg/TPS/tps/data/estimated_optical_flow_synthiaseq_train
+  DA_METHOD: SourceOnly
+  INFO_TARGET: tps/dataset/CityscapesSeq_list/info_SynthiaSeq.json
+  SET_SOURCE: train
+  SNAPSHOT_DIR: experiments_result/snapshots/tps_syn2city_SourceOnly
+  INPUT_SIZE_SOURCE:
+    - 1280
+    - 640
+TEST:
+  SNAPSHOT_STEP: 100
+  SNAPSHOT_START_ITER: 100
+  MODE: video_best # video_single video_best
+  INFO_TARGET: tps/dataset/CityscapesSeq_list/info_SynthiaSeq.json
+  SNAPSHOT_DIR: ['experiments_result/snapshots/tps_syn2city_SourceOnly']  # used in 'best' mode
+  # RESTORE_FROM_prototype: ['experiments_result/snapshots/tps_syn2city_SourceOnly/model_9000.pth',]
+  RESTORE_FROM_prototype: ['/home/customer/Desktop/ZZ/FMFSemi/TransferLearning/examples/domain_adaptation/video_tps/TPS/experiments_result/snapshots/SynthiaSeq2CityscapesSeq_ACCEL_DeepLabv2_TPS_PRODA__PESUDO_cd/model_37500.pth',]
+  
