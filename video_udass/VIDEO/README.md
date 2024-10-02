@@ -95,6 +95,7 @@ seeds, we provide the checkpoint with the median validation performance here.
 
 For quick preparation, please download the estimated optical flow of all datasets here.
 
+
 - Synthia-Seq
 
   [train](https://drive.google.com/file/d/18q6KH-beoBp5jSr1Pl1lMiEcb2te2vxq/view?usp=sharing)
@@ -105,34 +106,47 @@ For quick preparation, please download the estimated optical flow of all dataset
 
   [train](https://drive.google.com/file/d/193uZifde7WiuImwAgshkPTt1Z6zgE3z8/view?usp=sharing) | [val](https://drive.google.com/file/d/1USizndlUewVb8Eqh4SV6uNuLCEfV9vzU/view?usp=sharing)
 
+  The steps to generate the optical flow (refer to [issue](https://github.com/Dayan-Guan/DA-VSN/issues/1)):
+
+1. git clone git clone -b sdcnet [https://github.com/NVIDIA/semantic-segmentation.git](https://github.com/NVIDIA/semantic-segmentation.git);
+2. Download the [Code_for_Optical_Flow_Estimation.zip](https://github.com/Dayan-Guan/DA-VSN/files/7114575/Code_for_Optical_Flow_Estimation.zip) and unzip these files in the folder of sdcnet;
+3. Run the shell scripts to generate optical flow:
+   ```
+   [1] CItyscapes validation set: "python Cityscapes_val_optical_flow_scale512.py --pretrained ../pretrained_models/sdc_cityscapes_vrec.pth.tar --flownet2_checkpoint ../pretrained_models/FlowNet2_checkpoint.pth.tar --source_dir ../../data/Cityscapes --target_dir Cityscapes_val_optical_flow_scale512 --vis --resize 0.5"
+
+   [2] SynthiaSeq train set: "python Estimated_optical_flow_SynthiaSeq_train.py --pretrained ../pretrained_models/sdc_cityscapes_vrec.pth.tar --flownet2_checkpoint ../pretrained_models/FlowNet2_checkpoint.pth.tar --source_dir ../../data/SynthiaSeq/SEQS-04-DAWN/rgb --target_dir Estimated_optical_flow_SynthiaSeq_train --vis --resize 0.533333"
+
+   [3] Viper train set: "python Estimated_optical_flow_Viper_train.py --pretrained ../pretrained_models/sdc_cityscapes_vrec.pth.tar --flownet2_checkpoint ../pretrained_models/FlowNet2_checkpoint.pth.tar --source_dir ../../data/viper --target_dir /home/dayan/gdy/adv/snapshots/Estimated_optical_flow_Viper_train--vis --resize 0.533333"
+   ```
+
 ## Train and Test
 
 - Train
 
 ```
-  cd VIDEO/tps/scripts_ablation
+  cd xxxxPATHxxxx/video_udass/VIDEO (Please adjust according to the actual address of your device manually )
   # syn2city CNN
-  CUDA_VISIBLE_DEVICES=0 python train_DAVSS_DSF_cd_ablation_24.py --cfg configs/tps_syn2city.yml
+  python ./tps/scripts_ablation/train_DAVSS_DSF_cd_ablation_24.py --cfg ./tps/scripts_ablation/configs/tps_syn2city.yml
   # viper2city CNN
-  CUDA_VISIBLE_DEVICES=0 python train_DAVSS_DSF_cd_ablation_31.py --cfg configs/tps_viper2city.yml
+  python ./tps/scripts_ablation/train_DAVSS_DSF_cd_ablation_31.py --cfg ./tps/scripts_ablation/configs/tps_viper2city.yml
   # syn2city ViT
-  CUDA_VISIBLE_DEVICES=0 python train_DAVSS_DSF_cd_ablation_24_former.py --cfg configs/tps_syn2city.yml
+  python ./tps/scripts_ablation/train_DAVSS_DSF_cd_ablation_24_former.py --cfg ./tps/scripts_ablation/configs/tps_syn2city.yml
   # tps_viper2city ViT
-  CUDA_VISIBLE_DEVICES=0 python train_DAVSS_DSF_cd_ablation_31_former.py --cfg configs/tps_viper2city.yml
+  python ./tps/scripts_ablation/train_DAVSS_DSF_cd_ablation_31_former.py --cfg ./tps/scripts_ablation/configs/tps_viper2city.yml
 ```
 
-- Test (may in parallel with Train)
+- Test (can in parallel with Train)
 
 ```
-  cd VIDEO/tps/scripts_ablation
+  cd xxxxPATHxxxx/video_udass/VIDEO
   # syn2city CNN
-  CUDA_VISIBLE_DEVICES=0 python test_DAVSS_DSF_cd_ablation_24.py --cfg configs/tps_syn2city.yml
+  python ./tps/scripts_ablation/test_DAVSS_DSF_cd_ablation_24.py --cfg ./tps/scripts_ablation/configs/tps_syn2city.yml
   # viper2city CNN
-  CUDA_VISIBLE_DEVICES=0 python test_DAVSS_DSF_cd_ablation_31.py --cfg configs/tps_viper2city.yml
+  python ./tps/scripts_ablation/test_DAVSS_DSF_cd_ablation_31.py --cfg ./tps/scripts_ablation/configs/tps_viper2city.yml
   # syn2city ViT
-  CUDA_VISIBLE_DEVICES=0 python test_DAVSS_DSF_cd_ablation_24_former.py --cfg configs/tps_syn2city.yml
+  python ./tps/scripts_ablation/test_DAVSS_DSF_cd_ablation_24_former.py --cfg ./tps/scripts_ablation/configs/tps_syn2city.yml
   # tps_viper2city ViT
-  CUDA_VISIBLE_DEVICES=0 python test_DAVSS_DSF_cd_ablation_31_former.py --cfg configs/tps_viper2city.yml
+  python ./tps/scripts_ablation/test_DAVSS_DSF_cd_ablation_31_former.py --cfg ./tps/scripts_ablation/configs/tps_viper2city.yml
 ```
 
 ## Acknowledgement
@@ -140,6 +154,7 @@ For quick preparation, please download the estimated optical flow of all dataset
 This codebase is is based on the following open-source projects. We thank their
 authors for making the source code publicly available.
 
- [TPS](https://github.com/xing0047/TPS/tree/main)
-
- [DA-VSN](https://github.com/Dayan-Guan/DA-VSN)
+* [TPS](https://github.com/xing0047/TPS/tree/main)
+* [DA-VSN](https://github.com/Dayan-Guan/DA-VSN)
+* [Sdcnet ](https://github.com/NVIDIA/semantic-segmentation)
+* [FlowNet 2](https://github.com/NVIDIA/flownet2-pytorch)

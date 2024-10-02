@@ -1,6 +1,6 @@
 '''
- 
-cd /home/customer/Desktop/ZZ/FMFSemi/TransferLearning/examples/domain_adaptation/video_udass/TPS
+conda activate UDAVSS
+cd xxxxPATHxxxx/video_udass/VIDEO
 python ./tps/scripts_ablation/train_DAVSS_DSF_cd_ablation_31.py --cfg ./tps/scripts_ablation/configs/tps_viper2city.yml
 
 '''
@@ -19,7 +19,7 @@ import torch
 os.environ["CUDA_VISIBLE_DEVICES"] = '0'
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu' )
 import sys
-sys.path.append('/home/customer/Desktop/ZZ/FMFSemi/TransferLearning/examples/domain_adaptation/video_udass/TPS')
+sys.path.append('xxxxPATHxxxx/video_udass/VIDEO')
 
 from tps.domain_adaptation_ablation.config_v100 import cfg, cfg_from_file
 
