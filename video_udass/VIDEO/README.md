@@ -2,7 +2,7 @@
 
 ## Main Results
 
-#### SYNTHIA-Seq => Cityscapes-Seq
+#### SYNTHIA-Seq -> Cityscapes-Seq
 
 | Methods                | road           | side.          | buil.          | pole           | light          | sign           | vege.          | sky            | per.           | rider          | car            | mIoU           |
 | ---------------------- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- |
@@ -13,7 +13,7 @@
 | **QuadMix(CNN)** | 90.8           | 39.9           | **83.2** | 33.2           | 30.1           | 50.7           | 84.8           | 83.2           | 61.2           | 32.7           | 87.4           | 61.5           |
 | **QuadMix(ViT)** | **94.1** | **61.9** | 82.9           | **36.9** | **41.0** | **59.1** | **85.2** | **85.6** | **64.3** | **37.8** | **90.3** | **67.2** |
 
-#### VIPER => Cityscapes-Seq
+#### VIPER -> Cityscapes-Seq
 
 | Methods                | road           | side.          | buil.          | fence          | light          | sign           | vege.          | terr.          | sky            | per.           | car            | truck          | bus            | motor          | bike           | mIoU           |
 | ---------------------- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- |
@@ -82,9 +82,11 @@ VIDEO/data/SynthiaSeq/SEQS-04-DAWN/
 
 ## Checkpoints
 
-Below, we provide checkpoints of UDASS(HRDA) for the different benchmarks.
-As the results in the paper are provided as the mean over three random
-seeds, we provide the checkpoint with the median validation performance here.
+Below, we provide checkpoints of UDASS for the different benchmarks.
+
+```
+VIDEO/pretrained_models
+```
 
 * [video-UDASS(VIT) for Synthia-Seq→Cityscapes-Seq](https://drive.google.com/file/d/1kwzpghUD1UiK6AvQyazSw0gMGYjAUCwe/view?usp=sharing)
 * [video-UDASS(VIT) for VIPER→Cityscapes-Seq](https://drive.google.com/file/d/1OCDnHlz2lJplnPcV7iINOhiRLUTeNm6P/view?usp=sharing)
@@ -92,6 +94,21 @@ seeds, we provide the checkpoint with the median validation performance here.
 * [video-UDASS(CNN) for VIPER→Cityscapes-Seq](https://drive.google.com/file/d/1TGpysDaBkQ3F-NQj9wTL0JJnclQMQmto/view?usp=sharing)
 
 ## Optical Flow Estimation
+
+The steps to generate the optical flow (refer to [issue](https://github.com/Dayan-Guan/DA-VSN/issues/1)):
+
+1. git clone git clone -b sdcnet [https://github.com/NVIDIA/semantic-segmentation.git](https://github.com/NVIDIA/semantic-segmentation.git);
+2. Unzip the files of [video_udass/Code_for_Optical_Flow_Estimation.zip](https://github.com/ZHE-SAPI/UDASS/blob/main/video_udass/Code_for_Optical_Flow_Estimation.zip) and put them in the folder of sdcnet;
+3. Run the shell scripts to generate optical flow:
+   ```
+   [1] CItyscapes validation set: "python Cityscapes_val_optical_flow_scale512.py --pretrained ../pretrained_models/sdc_cityscapes_vrec.pth.tar --flownet2_checkpoint ../pretrained_models/FlowNet2_checkpoint.pth.tar --source_dir ../../data/Cityscapes --target_dir Cityscapes_val_optical_flow_scale512 --vis --resize 0.5"
+
+   [2] SynthiaSeq train set: "python Estimated_optical_flow_SynthiaSeq_train.py --pretrained ../pretrained_models/sdc_cityscapes_vrec.pth.tar --flownet2_checkpoint ../pretrained_models/FlowNet2_checkpoint.pth.tar --source_dir ../../data/SynthiaSeq/SEQS-04-DAWN/rgb --target_dir Estimated_optical_flow_SynthiaSeq_train --vis --resize 0.533333"
+
+   [3] Viper train set: "python Estimated_optical_flow_Viper_train.py --pretrained ../pretrained_models/sdc_cityscapes_vrec.pth.tar --flownet2_checkpoint ../pretrained_models/FlowNet2_checkpoint.pth.tar --source_dir ../../data/viper --target_dir /home/dayan/gdy/adv/snapshots/Estimated_optical_flow_Viper_train--vis --resize 0.533333"
+   ```
+
+
 
 For quick preparation, please download the estimated optical flow of all datasets here, and put them as subfolders in the [./VIDEO/data](https://github.com/ZHE-SAPI/UDASS/tree/main/video_udass/VIDEO/data) folder.
 
@@ -111,19 +128,6 @@ VIDEO/data/estimated_optical_flow_synthiaseq_train/
 - Cityscapes-Seq
 
   [train_folder 1 (unif)](https://pan.baidu.com/s/1SQZp6bqXJih9hBFeDO2fjA?pwd=unif),            [train_folder 2 (unif)](https://pan.baidu.com/s/19rIzZ6KYyo5KR_ikGSOfGA?pwd=unif),            [train_folder 3 (unif)](https://pan.baidu.com/s/1y2XYYJW8MNY0RceZBOvviA?pwd=unif),       |       [val](https://pan.baidu.com/s/10JBF43JeFMFjGSr5e8ittw?pwd=unif)
-
-  The steps to generate the optical flow (refer to [issue](https://github.com/Dayan-Guan/DA-VSN/issues/1)):
-
-1. git clone git clone -b sdcnet [https://github.com/NVIDIA/semantic-segmentation.git](https://github.com/NVIDIA/semantic-segmentation.git);
-2. Unzip the files of [video_udass/Code_for_Optical_Flow_Estimation.zip](https://github.com/ZHE-SAPI/UDASS/blob/main/video_udass/Code_for_Optical_Flow_Estimation.zip) and put them in the folder of sdcnet;
-3. Run the shell scripts to generate optical flow:
-   ```
-   [1] CItyscapes validation set: "python Cityscapes_val_optical_flow_scale512.py --pretrained ../pretrained_models/sdc_cityscapes_vrec.pth.tar --flownet2_checkpoint ../pretrained_models/FlowNet2_checkpoint.pth.tar --source_dir ../../data/Cityscapes --target_dir Cityscapes_val_optical_flow_scale512 --vis --resize 0.5"
-
-   [2] SynthiaSeq train set: "python Estimated_optical_flow_SynthiaSeq_train.py --pretrained ../pretrained_models/sdc_cityscapes_vrec.pth.tar --flownet2_checkpoint ../pretrained_models/FlowNet2_checkpoint.pth.tar --source_dir ../../data/SynthiaSeq/SEQS-04-DAWN/rgb --target_dir Estimated_optical_flow_SynthiaSeq_train --vis --resize 0.533333"
-
-   [3] Viper train set: "python Estimated_optical_flow_Viper_train.py --pretrained ../pretrained_models/sdc_cityscapes_vrec.pth.tar --flownet2_checkpoint ../pretrained_models/FlowNet2_checkpoint.pth.tar --source_dir ../../data/viper --target_dir /home/dayan/gdy/adv/snapshots/Estimated_optical_flow_Viper_train--vis --resize 0.533333"
-   ```
 
 ## Train and Test
 

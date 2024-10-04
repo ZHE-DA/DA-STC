@@ -137,8 +137,6 @@ respective dataset to obtain the test score.
 ## Checkpoints
 
 Below, we provide checkpoints of UDASS(HRDA) for the different benchmarks.
-As the results in the paper are provided as the mean over three random
-seeds, we provide the checkpoint with the median validation performance here.
 
 * [image-UDASS(VIT) for GTA→Cityscapes](https://drive.google.com/file/d/1VYlG0f92Y8VAv712-i5f4GEIwTqbURqf/view?usp=sharing)
 * [image-UDASS(VIT) for Synthia→Cityscapes](https://drive.google.com/file/d/1ll6BAqoexkNDOpLJ3eaJRIBgkysnMwsZ/view?usp=sharing)
