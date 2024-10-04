@@ -93,17 +93,24 @@ seeds, we provide the checkpoint with the median validation performance here.
 
 ## Optical Flow Estimation
 
-For quick preparation, please download the estimated optical flow of all datasets here, and put them in the ./VIDEO/data folder.
+For quick preparation, please download the estimated optical flow of all datasets here, and put them as subfolders in the [./VIDEO/data](https://github.com/ZHE-SAPI/UDASS/tree/main/video_udass/VIDEO/data) folder.
+
+```
+VIDEO/data/estimated_optical_flow_cityscapes_seq_val/
+VIDEO/data/estimated_optical_flow_cityscapes_seq_train/
+VIDEO/data/estimated_optical_flow_viper_train/
+VIDEO/data/estimated_optical_flow_synthiaseq_train/
+```
 
 - Synthia-Seq
 
-  [folder 1 (unif)](https://pan.baidu.com/s/1pWuMpJBkLUMetjzIx9dbKA?pwd=unif)
+  [train_folder 1 (unif)](https://pan.baidu.com/s/1pWuMpJBkLUMetjzIx9dbKA?pwd=unif)
 - VIPER
 
-  [folder 1 (unif)](https://pan.baidu.com/s/1IedArcO6OW7fXzs4NvFPIw?pwd=unif)            [folder 2 (unif)](https://pan.baidu.com/s/1DPSDZJytSJYvmlr4SksRKA?pwd=unif)            [folder 3 (unif)](https://pan.baidu.com/s/1xbkKml5tn1Bvmzskue1pLQ?pwd=unif)             [folder 4 (unif)](https://pan.baidu.com/s/1PLZfMKwCNxr65SAnCQbSQw?pwd=unif)            [folder 5 (unif)](https://pan.baidu.com/s/1gsTDkKa3unAy5jsfxJR86w?pwd=unif)
+  [train_folder 1 (unif)](https://pan.baidu.com/s/1IedArcO6OW7fXzs4NvFPIw?pwd=unif),            [train_folder 2 (unif)](https://pan.baidu.com/s/1DPSDZJytSJYvmlr4SksRKA?pwd=unif),            [train_folder 3 (unif)](https://pan.baidu.com/s/1xbkKml5tn1Bvmzskue1pLQ?pwd=unif),            [train_folder 4 (unif)](https://pan.baidu.com/s/1PLZfMKwCNxr65SAnCQbSQw?pwd=unif),            [train_folder 5 (unif)](https://pan.baidu.com/s/1gsTDkKa3unAy5jsfxJR86w?pwd=unif)
 - Cityscapes-Seq
 
-  [train_folder 1 (unif)](https://pan.baidu.com/s/1SQZp6bqXJih9hBFeDO2fjA?pwd=unif)            [train_folder 1 (unif)](https://pan.baidu.com/s/19rIzZ6KYyo5KR_ikGSOfGA?pwd=unif)            [train_folder 1 (unif)](https://pan.baidu.com/s/1y2XYYJW8MNY0RceZBOvviA?pwd=unif)       |       [val](https://pan.baidu.com/s/10JBF43JeFMFjGSr5e8ittw?pwd=unif)
+  [train_folder 1 (unif)](https://pan.baidu.com/s/1SQZp6bqXJih9hBFeDO2fjA?pwd=unif),            [train_folder 2 (unif)](https://pan.baidu.com/s/19rIzZ6KYyo5KR_ikGSOfGA?pwd=unif),            [train_folder 3 (unif)](https://pan.baidu.com/s/1y2XYYJW8MNY0RceZBOvviA?pwd=unif),       |       [val](https://pan.baidu.com/s/10JBF43JeFMFjGSr5e8ittw?pwd=unif)
 
   The steps to generate the optical flow (refer to [issue](https://github.com/Dayan-Guan/DA-VSN/issues/1)):
 
