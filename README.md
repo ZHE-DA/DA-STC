@@ -30,7 +30,7 @@ You can find the source code to run image-UDASS on domain-adaptive **VIDEO** sem
 
 ## Citation
 
-If you find MIC useful in your research, please consider citing:
+If you find UDASS useful in your research, please consider citing:
 
 ```
 @misc{zhang2024udass,
