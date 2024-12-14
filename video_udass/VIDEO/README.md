@@ -155,7 +155,7 @@ VIDEO/data/estimated_optical_flow_synthiaseq_train/
   python ./tps/scripts_ablation/test_DAVSS_DSF_cd_ablation_31.py --cfg ./tps/scripts_ablation/configs/tps_viper2city.yml
   # syn2city ViT
   python ./tps/scripts_ablation/test_DAVSS_DSF_cd_ablation_24_former.py --cfg ./tps/scripts_ablation/configs/tps_syn2city.yml
-  # tps_viper2city ViT
+  # viper2city ViT
   python ./tps/scripts_ablation/test_DAVSS_DSF_cd_ablation_31_former.py --cfg ./tps/scripts_ablation/configs/tps_viper2city.yml
 ```
 
